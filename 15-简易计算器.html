@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" />
+		/
+		<input type="text" />
+		=
+		<input type="text" />
+		<input type="button" value="按钮"/>
+		<script>
+			var inps = document.getElementsByTagName('input');
+			inps[3].onclick = function(){
+				var val1 = inps[0].value;
+				var val2 = inps[1].value;
+				//inps[2].value = Number(val1)+Number(val2);
+				inps[2].value = val1/val2;
+				//+符号的时候需要用上转换为number +号默认为拼接符号，
+				//不作为运算符号，其他的符号作为运算符号
+			}
+		</script>
+	</body>
+</html>
